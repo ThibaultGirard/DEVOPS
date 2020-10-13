@@ -14,9 +14,9 @@ app.use(bodyParser.urlencoded({
   extended: false
 }))
 app.use(bodyParser.json())
-app.style.fontSize = '40px'
-app.get('/', (req, res) => res.send('Yo tt le monde c squeezie'))
 
+app.get('/', (req, res) => res.send('Yo tt le monde c squeezie'))
+res.style.fontSize = '40px'
 app.use('/user', userRouter)
 
 const server = app.listen(port, (err) => {
